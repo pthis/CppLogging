@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CppLogging
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">C++ Logging Library</div>
   </td>
@@ -108,9 +108,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a15f113b33935765efb2e48d13badc88e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cpp_logging_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpp_logging_1_1_config.html#a15f113b33935765efb2e48d13badc88e">CreateLogger</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a15f113b33935765efb2e48d13badc88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create named logger.  <a href="class_cpp_logging_1_1_config.html#a15f113b33935765efb2e48d13badc88e">More...</a><br /></td></tr>
 <tr class="separator:a15f113b33935765efb2e48d13badc88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8adf1cc3c422b5a6abda03aeea980a12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpp_logging_1_1_config.html#a8adf1cc3c422b5a6abda03aeea980a12">Setup</a> ()</td></tr>
-<tr class="memdesc:a8adf1cc3c422b5a6abda03aeea980a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the logging infrastructure.  <a href="class_cpp_logging_1_1_config.html#a8adf1cc3c422b5a6abda03aeea980a12">More...</a><br /></td></tr>
-<tr class="separator:a8adf1cc3c422b5a6abda03aeea980a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab249eaf6f6a28f2eb7b2bf022c83e4d8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpp_logging_1_1_config.html#ab249eaf6f6a28f2eb7b2bf022c83e4d8">Startup</a> ()</td></tr>
+<tr class="memdesc:ab249eaf6f6a28f2eb7b2bf022c83e4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startup the logging infrastructure.  <a href="class_cpp_logging_1_1_config.html#ab249eaf6f6a28f2eb7b2bf022c83e4d8">More...</a><br /></td></tr>
+<tr class="separator:ab249eaf6f6a28f2eb7b2bf022c83e4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2218c74ee4f25fe9f4963d1caa1ef160"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">Shutdown</a> ()</td></tr>
 <tr class="memdesc:a2218c74ee4f25fe9f4963d1caa1ef160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown the logging infrastructure.  <a href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">More...</a><br /></td></tr>
 <tr class="separator:a2218c74ee4f25fe9f4963d1caa1ef160"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,35 +400,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8adf1cc3c422b5a6abda03aeea980a12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8adf1cc3c422b5a6abda03aeea980a12">&#9670;&nbsp;</a></span>Setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CppLogging::Config::Setup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Setup the logging infrastructure. </p>
-
-<p class="definition">Definition at line <a class="el" href="config_8cpp_source.html#l00068">68</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a2218c74ee4f25fe9f4963d1caa1ef160"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2218c74ee4f25fe9f4963d1caa1ef160">&#9670;&nbsp;</a></span>Shutdown()</h2>
 
@@ -454,7 +425,38 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Shutdown the logging infrastructure. </p>
 
-<p class="definition">Definition at line <a class="el" href="config_8cpp_source.html#l00083">83</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="config_8cpp_source.html#l00086">86</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab249eaf6f6a28f2eb7b2bf022c83e4d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab249eaf6f6a28f2eb7b2bf022c83e4d8">&#9670;&nbsp;</a></span>Startup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CppLogging::Config::Startup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Startup the logging infrastructure. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="async_8cpp-example.html#a2">async.cpp</a>, <a class="el" href="console_8cpp-example.html#a1">console.cpp</a>, <a class="el" href="file_8cpp-example.html#a1">file.cpp</a>, <a class="el" href="sync_8cpp-example.html#a1">sync.cpp</a>, and <a class="el" href="syslog_8cpp-example.html#a1">syslog.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="config_8cpp_source.html#l00068">68</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>

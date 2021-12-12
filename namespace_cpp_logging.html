@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CppLogging
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">C++ Logging Library</div>
   </td>
@@ -272,9 +272,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acf93e8d9837d619ad6e47144d2626c09"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acf93e8d9837d619ad6e47144d2626c09"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#acf93e8d9837d619ad6e47144d2626c09">SerializeArgument</a> (<a class="el" href="class_cpp_logging_1_1_record.html">Record</a> &amp;record, const T *argument)</td></tr>
 <tr class="separator:acf93e8d9837d619ad6e47144d2626c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb644b8b46331b2392f9a5b0eeb79dd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0bb644b8b46331b2392f9a5b0eeb79dd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#a0bb644b8b46331b2392f9a5b0eeb79dd">SerializeArgument</a> (<a class="el" href="class_cpp_logging_1_1_record.html">Record</a> &amp;record, const fmt::internal::named_arg&lt; T, char &gt; &amp;argument)</td></tr>
-<tr class="separator:a0bb644b8b46331b2392f9a5b0eeb79dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc40dbca782b4d31ef8ebdcd74d80e93"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acc40dbca782b4d31ef8ebdcd74d80e93"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#acc40dbca782b4d31ef8ebdcd74d80e93">SerializeArgument</a> (<a class="el" href="class_cpp_logging_1_1_record.html">Record</a> &amp;record, const fmt::detail::named_arg&lt; char, T &gt; &amp;argument)</td></tr>
+<tr class="separator:acc40dbca782b4d31ef8ebdcd74d80e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec1afc87086025f9dc712211d1574129"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aec1afc87086025f9dc712211d1574129"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#aec1afc87086025f9dc712211d1574129">SerializeArgument</a> (<a class="el" href="class_cpp_logging_1_1_record.html">Record</a> &amp;record, const T &amp;argument)</td></tr>
 <tr class="separator:aec1afc87086025f9dc712211d1574129"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,7 +286,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8bbbfc46fdcba8b729fdf351ee4c8476"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#a8bbbfc46fdcba8b729fdf351ee4c8476">version</a> [] = &quot;1.0.0.0&quot;</td></tr>
+<tr class="memitem:a8bbbfc46fdcba8b729fdf351ee4c8476"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#a8bbbfc46fdcba8b729fdf351ee4c8476">version</a> [] = &quot;1.0.2.0&quot;</td></tr>
 <tr class="memdesc:a8bbbfc46fdcba8b729fdf351ee4c8476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project version.  <a href="namespace_cpp_logging.html#a8bbbfc46fdcba8b729fdf351ee4c8476">More...</a><br /></td></tr>
 <tr class="separator:a8bbbfc46fdcba8b729fdf351ee4c8476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -563,8 +563,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0bb644b8b46331b2392f9a5b0eeb79dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bb644b8b46331b2392f9a5b0eeb79dd">&#9670;&nbsp;</a></span>SerializeArgument() <span class="overload">[5/22]</span></h2>
+<a id="acc40dbca782b4d31ef8ebdcd74d80e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc40dbca782b4d31ef8ebdcd74d80e93">&#9670;&nbsp;</a></span>SerializeArgument() <span class="overload">[5/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,7 +583,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const fmt::internal::named_arg&lt; T, char &gt; &amp;&#160;</td>
+          <td class="paramtype">const fmt::detail::named_arg&lt; char, T &gt; &amp;&#160;</td>
           <td class="paramname"><em>argument</em>&#160;</td>
         </tr>
         <tr>
@@ -677,7 +677,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00322">322</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
+<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00347">347</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
 
 </div>
 </div>
@@ -723,7 +723,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00329">329</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
+<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00354">354</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
 
 </div>
 </div>
@@ -1297,7 +1297,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00446">446</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
+<p class="definition">Definition at line <a class="el" href="record_8inl_source.html#l00472">472</a> of file <a class="el" href="record_8inl_source.html">record.inl</a>.</p>
 
 </div>
 </div>
@@ -1309,7 +1309,7 @@ template&lt;typename T &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char CppLogging::version[] = &quot;1.0.0.0&quot;</td>
+          <td class="memname">const char CppLogging::version[] = &quot;1.0.2.0&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

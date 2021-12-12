@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CppLogging
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">C++ Logging Library</div>
   </td>
@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_cpp_logging_1_1_config.html#ab6c2a747bf48db5424a1a1839b7588bf">CreateLogger</a>();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_cpp_logging_1_1_config.html#a8adf1cc3c422b5a6abda03aeea980a12">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cpp_logging_1_1_config.html#a8adf1cc3c422b5a6abda03aeea980a12">Config::Setup</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_cpp_logging_1_1_config.html#ab249eaf6f6a28f2eb7b2bf022c83e4d8">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cpp_logging_1_1_config.html#ab249eaf6f6a28f2eb7b2bf022c83e4d8">Config::Startup</a>()</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_cpp_logging_1_1_config.html">Config</a>&amp; instance = GetInstance();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
@@ -144,37 +144,40 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; processor : instance._working)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (processor.second)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            processor.second-&gt;Start();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">Config::Shutdown</a>()</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_cpp_logging_1_1_config.html">Config</a>&amp; instance = GetInstance();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    CppCommon::Locker&lt;CppCommon::CriticalSection&gt; locker(instance._lock);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Flush and stop all working logger processors</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; processor : instance._working)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (processor.second)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            processor.second-&gt;Flush();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            processor.second-&gt;Stop();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// Clear working logger processors map</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    instance._working.clear();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace CppLogging</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// Clear config logger processors map</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    instance._config.clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">Config::Shutdown</a>()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_cpp_logging_1_1_config.html">Config</a>&amp; instance = GetInstance();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    CppCommon::Locker&lt;CppCommon::CriticalSection&gt; locker(instance._lock);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// Flush and stop all working logger processors</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; processor : instance._working)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (processor.second)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            processor.second-&gt;Flush();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            processor.second-&gt;Stop();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// Clear working logger processors map</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    instance._working.clear();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// namespace CppLogging</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_cpp_logging_1_1_config_html_ab249eaf6f6a28f2eb7b2bf022c83e4d8"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#ab249eaf6f6a28f2eb7b2bf022c83e4d8">CppLogging::Config::Startup</a></div><div class="ttdeci">static void Startup()</div><div class="ttdoc">Startup the logging infrastructure.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00068">config.cpp:68</a></div></div>
 <div class="ttc" id="aclass_cpp_logging_1_1_logger_html"><div class="ttname"><a href="class_cpp_logging_1_1_logger.html">CppLogging::Logger</a></div><div class="ttdoc">Logger interface.</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00022">logger.h:22</a></div></div>
 <div class="ttc" id="anamespace_cpp_logging_html"><div class="ttname"><a href="namespace_cpp_logging.html">CppLogging</a></div><div class="ttdoc">C++ Logging project definitions.</div><div class="ttdef"><b>Definition:</b> <a href="appender_8h_source.html#l00015">appender.h:15</a></div></div>
 <div class="ttc" id="aclass_cpp_logging_1_1_config_html"><div class="ttname"><a href="class_cpp_logging_1_1_config.html">CppLogging::Config</a></div><div class="ttdoc">Logger configuration static class.</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00024">config.h:24</a></div></div>
-<div class="ttc" id="aclass_cpp_logging_1_1_config_html_a8adf1cc3c422b5a6abda03aeea980a12"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#a8adf1cc3c422b5a6abda03aeea980a12">CppLogging::Config::Setup</a></div><div class="ttdeci">static void Setup()</div><div class="ttdoc">Setup the logging infrastructure.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00068">config.cpp:68</a></div></div>
 <div class="ttc" id="aclass_cpp_logging_1_1_config_html_ab6c2a747bf48db5424a1a1839b7588bf"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#ab6c2a747bf48db5424a1a1839b7588bf">CppLogging::Config::CreateLogger</a></div><div class="ttdeci">static Logger CreateLogger()</div><div class="ttdoc">Create default logger.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00037">config.cpp:37</a></div></div>
-<div class="ttc" id="anamespace_cpp_logging_html_a483acf995015b6623510acb20a4017d8"><div class="ttname"><a href="namespace_cpp_logging.html#a483acf995015b6623510acb20a4017d8">CppLogging::swap</a></div><div class="ttdeci">void swap(Record &amp;record1, Record &amp;record2) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="record_8inl_source.html#l00446">record.inl:446</a></div></div>
-<div class="ttc" id="aclass_cpp_logging_1_1_config_html_a2218c74ee4f25fe9f4963d1caa1ef160"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">CppLogging::Config::Shutdown</a></div><div class="ttdeci">static void Shutdown()</div><div class="ttdoc">Shutdown the logging infrastructure.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00083">config.cpp:83</a></div></div>
+<div class="ttc" id="anamespace_cpp_logging_html_a483acf995015b6623510acb20a4017d8"><div class="ttname"><a href="namespace_cpp_logging.html#a483acf995015b6623510acb20a4017d8">CppLogging::swap</a></div><div class="ttdeci">void swap(Record &amp;record1, Record &amp;record2) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="record_8inl_source.html#l00472">record.inl:472</a></div></div>
+<div class="ttc" id="aclass_cpp_logging_1_1_config_html_a2218c74ee4f25fe9f4963d1caa1ef160"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#a2218c74ee4f25fe9f4963d1caa1ef160">CppLogging::Config::Shutdown</a></div><div class="ttdeci">static void Shutdown()</div><div class="ttdoc">Shutdown the logging infrastructure.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00086">config.cpp:86</a></div></div>
 <div class="ttc" id="aclass_cpp_logging_1_1_config_html_aa3e1df3aa623bada0b5523294e9fde14"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#aa3e1df3aa623bada0b5523294e9fde14">CppLogging::Config::ConfigLogger</a></div><div class="ttdeci">static void ConfigLogger(const std::shared_ptr&lt; Processor &gt; &amp;sink)</div><div class="ttdoc">Configure default logger with a given logging sink processor.</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00019">config.cpp:19</a></div></div>
 <div class="ttc" id="aclass_cpp_logging_1_1_config_html_a4f5b9a09720c1a71122aa3d4da508f27"><div class="ttname"><a href="class_cpp_logging_1_1_config.html#a4f5b9a09720c1a71122aa3d4da508f27">CppLogging::Config::~Config</a></div><div class="ttdeci">~Config()</div><div class="ttdef"><b>Definition:</b> <a href="config_8cpp_source.html#l00013">config.cpp:13</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Logger configuration definition.</div></div>
