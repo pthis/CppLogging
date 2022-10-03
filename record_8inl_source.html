@@ -384,7 +384,7 @@ $(function() {
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="namespace_cpp_logging.html#adb49911690ca0cfe1f7d387a6ffee5e5">SerializeArgument</a>(record, argument.value);</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#if FMT_USE_NONTYPE_TEMPLATE_PARAMETERS</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#if FMT_USE_NONTYPE_TEMPLATE_ARGS</span></div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Char, <span class="keywordtype">size_t</span> N, fmt::detail_exported::fixed_<span class="keywordtype">string</span>&lt;Char, N&gt; Str&gt;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_cpp_logging.html#adb49911690ca0cfe1f7d387a6ffee5e5">SerializeArgument</a>(Record&amp; record, <span class="keyword">const</span> fmt::detail::statically_named_arg&lt;T, Char, N, Str&gt;&amp; argument)</div>
