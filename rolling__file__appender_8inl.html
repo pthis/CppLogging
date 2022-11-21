@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CppLogging: include/logging/level.h File Reference</title>
+<title>CppLogging: include/logging/appenders/rolling_file_appender.inl File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,25 +63,22 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7188461832bb92671066220d237ea5f7.html">logging</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7188461832bb92671066220d237ea5f7.html">logging</a></li><li class="navelem"><a class="el" href="dir_96ae6203eca9794c5312c0d66d754977.html">appenders</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">level.h File Reference</div>  </div>
+<div class="title">rolling_file_appender.inl File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Logging level definition.  
+<p>Rolling file appender inline implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
-<code>#include &quot;<a class="el" href="level_8inl_source.html">level.inl</a>&quot;</code><br />
-</div>
-<p><a href="level_8h_source.html">Go to the source code of this file.</a></p>
+
+<p><a href="rolling__file__appender_8inl_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -89,36 +86,20 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespace_cpp_logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Logging project definitions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ac4e889a814b82af010ef93be2e618f3b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3b">CppLogging::Level</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3bab50339a10e1de285ac99d4c3990b8693">CppLogging::Level::NONE</a> = 0x00, 
-<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3ba19da7170bea36556dde582519795f3fc">CppLogging::Level::FATAL</a> = 0x1F, 
-<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3babb1ca97ec761fc37101737ba0aa2e7c5">CppLogging::Level::ERROR</a> = 0x3F, 
-<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3ba32bd8a1db2275458673903bdb84cb277">CppLogging::Level::WARN</a> = 0x7F, 
-<br />
-&#160;&#160;<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3ba551b723eafd6a31d444fcb2f5920fbd3">CppLogging::Level::INFO</a> = 0x9F, 
-<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3badc30ec20708ef7b0f641ef78b7880a15">CppLogging::Level::DEBUG</a> = 0xBF, 
-<a class="el" href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3ba5fb1f955b45e38e31789286a1790398d">CppLogging::Level::ALL</a> = 0xFF
-<br />
- }</td></tr>
-<tr class="memdesc:ac4e889a814b82af010ef93be2e618f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging level.  <a href="namespace_cpp_logging.html#ac4e889a814b82af010ef93be2e618f3b">More...</a><br /></td></tr>
-<tr class="separator:ac4e889a814b82af010ef93be2e618f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5e86e3576a78d45930a1311847b8786c"><td class="memTemplParams" colspan="2">template&lt;class TOutputStream &gt; </td></tr>
-<tr class="memitem:a5e86e3576a78d45930a1311847b8786c"><td class="memTemplItemLeft" align="right" valign="top">TOutputStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#a5e86e3576a78d45930a1311847b8786c">CppLogging::operator&lt;&lt;</a> (TOutputStream &amp;stream, Level level)</td></tr>
-<tr class="memdesc:a5e86e3576a78d45930a1311847b8786c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream output: Logging level.  <a href="namespace_cpp_logging.html#a5e86e3576a78d45930a1311847b8786c">More...</a><br /></td></tr>
-<tr class="separator:a5e86e3576a78d45930a1311847b8786c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956bd224f5dec3857ff387f0bf3d5eb9"><td class="memTemplParams" colspan="2">template&lt;class TOutputStream &gt; </td></tr>
+<tr class="memitem:a956bd224f5dec3857ff387f0bf3d5eb9"><td class="memTemplItemLeft" align="right" valign="top">TOutputStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_cpp_logging.html#a956bd224f5dec3857ff387f0bf3d5eb9">CppLogging::operator&lt;&lt;</a> (TOutputStream &amp;stream, TimeRollingPolicy policy)</td></tr>
+<tr class="memdesc:a956bd224f5dec3857ff387f0bf3d5eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream output: Time rolling policy.  <a href="namespace_cpp_logging.html#a956bd224f5dec3857ff387f0bf3d5eb9">More...</a><br /></td></tr>
+<tr class="separator:a956bd224f5dec3857ff387f0bf3d5eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Logging level definition. </p>
+<div class="textblock"><p>Rolling file appender inline implementation. </p>
 <dl class="section author"><dt>Author</dt><dd>Ivan Shynkarenka </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>08.07.2016 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>12.09.2016 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT License </dd></dl>
 
-<p class="definition">Definition in file <a class="el" href="level_8h_source.html">level.h</a>.</p>
+<p class="definition">Definition in file <a class="el" href="rolling__file__appender_8inl_source.html">rolling_file_appender.inl</a>.</p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
