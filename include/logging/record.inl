@@ -367,7 +367,7 @@ inline Record& Record::Format(fmt::format_string<T...> pattern, T&&... args)
 template <typename... T>
 inline Record& Record::StoreFormat(fmt::format_string<T...> pattern, T&&... args)
 {
-    fmt::string_view view = pattern;
+    const fmt::string_view& view = pattern.get();
     message.assign(view.begin(), view.end());
     SerializeArgument(*this, std::forward<T>(args)...);
     return *this;
